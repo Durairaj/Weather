@@ -61,4 +61,6 @@ http://localhost:8081/api/weather1.json
 ###### TODO
 
 >1. Tests needs to be added
+>2. use apollo-link-rest and Grapqhl 
+
  
