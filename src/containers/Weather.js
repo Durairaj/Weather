@@ -22,7 +22,7 @@ const mapStateToProps = (state, props) => {
 };
 
 // Render prop component to render the component depending on the state
-class WeatherHOC extends PureComponent {
+class Weather extends PureComponent {
   state = { content: null, selectedUnit: this.props.selectedUnit };
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -76,7 +76,7 @@ class WeatherHOC extends PureComponent {
   }
 }
 
-WeatherHOC.propTypes = {
+Weather.propTypes = {
   url: PropTypes.string.isRequired,
   provider: PropTypes.string.isRequired,
   onLoading: PropTypes.func.isRequired,
@@ -87,4 +87,4 @@ WeatherHOC.propTypes = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(WeatherHOC);
+)(Weather);

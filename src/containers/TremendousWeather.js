@@ -1,5 +1,5 @@
 import React from 'react';
-import Weather from 'containers/WeatherHOC';
+import Weather from 'containers/Weather';
 import LoadingIndicator from 'components/LoadingIndicator';
 import ErrorInformation from 'components/ErrorInformation';
 import DetailedWeatherView from 'components/DetailedWeatherView';
