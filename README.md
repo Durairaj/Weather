@@ -1,21 +1,31 @@
 # Weather
 
-
+Detailed Weather Information
 ![Detailed Weather Information](https://github.com/Durairaj/openWeatherReact/blob/master/DetailedInformation.png)
+
+
+Basic weather Information
 ![Basic Weather Information](https://github.com/Durairaj/openWeatherReact/blob/master/BasicInformation.png)
+
+Unit Display settings configuration
 ![Unit Display Settings](https://github.com/Durairaj/openWeatherReact/blob/master/UnitDisplaySettings.png)
 
 # Quick start
 
 Clone this repo using git clone https://github.com/Durairaj/openWeatherReact.git
+
 Move to the appropriate directory: cd openWeatherReact
 
 To install it you need to run: `yarn install`
+
 To execute the server, simply run `yarn run server`
+
 To execute the client, simply run `yarn start`
+
 To execute both the client and server in single script, simply run `yarn run dev`
 
 There will be two available apis at the following addresses:
+
 http://localhost:8081/api/weather0.json
 http://localhost:8081/api/weather1.json
 
