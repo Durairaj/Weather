@@ -58,7 +58,7 @@ http://localhost:8081/api/weather1.json
 >1. Icon for the detailed weather information is loaded by using icon code on the openweather API platform
 
 
-######TODO
+###### TODO
 
 >1. Tests needs to be added
  
