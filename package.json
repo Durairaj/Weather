@@ -1,5 +1,5 @@
 {
-  "name": "react-weather-test",
+  "name": "weather-information",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,13 +32,16 @@
     "history": "^4.7.2",
     "html-webpack-plugin": "2.29.0",
     "http-server": "^0.11.1",
+    "husky": "^0.14.3",
     "install": "^0.12.1",
     "jest": "20.0.4",
+    "lint-staged": "^7.2.0",
     "loglevel": "^1.6.1",
     "npm": "^6.2.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
+    "prettier": "^1.13.7",
     "promise": "8.0.1",
     "raf": "3.4.0",
     "react": "^16.4.1",
@@ -67,8 +70,23 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "dev": "npm run start && npm run server"
-
+    "dev": "npm run start && npm run server",
+    "lint:staged": "lint-staged",
+    "precommit": "lint-staged --debug",
+    "prettify": "find . -name \"*.js\" -o -name \"*.d.ts\" -o -name \"*.tsx\" | grep -v -f .prettierignore | xargs prettier --write"
+  },
+  "pre-commit": [
+    "pre-commit"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:eslint:fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
